@@ -7,7 +7,7 @@ class App extends React.Component {
         return (
             <div>
                 <div className="card-product">
-                    <div class="product-images">
+                    <div className="product-images">
                         <ProductImage />
                         <ThumbnailList />
                     </div>
