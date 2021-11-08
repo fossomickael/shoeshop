@@ -1,5 +1,4 @@
 .product-large  {
-    
     width: 250px;
     height: 250px;
     background-size: cover;
@@ -8,5 +7,17 @@
 @for $id from 1 through 4 {
     .product-#{$id}  {
         background-image: url(./assets/images/image-product-#{$id}.jpg);
+    }
+}
+
+.product-thumb  {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+}
+
+@for $thumbid from 1 through 4 {
+    .product-#{$thumbid}-thumbnail  {
+        background-image: url(./assets/images/image-product-#{$thumbid}-thumbnail.jpg);
     }
 }
