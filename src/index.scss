@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&family=Rubik:wght@300;400;500&display=swap');
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+}
 .card-product {
     display: flex;
     width: 800px;
@@ -19,6 +24,10 @@
     .product-#{$id}  {
         background-image: url(./assets/images/image-product-#{$id}.jpg);
     }
+}
+
+.product-description {
+    margin-left: 50px;
 }
 
 .thumblist {
