@@ -5,7 +5,7 @@ import ProductDescription from './ProductDescription';
 class App extends React.Component {
     render() {
         return (
-            <div>
+            <div className="useful-width">
                 <div className="card-product">
                     <div className="product-images">
                         <ProductImage />
