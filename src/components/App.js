@@ -7,10 +7,13 @@ class App extends React.Component {
         return (
             <div>
                 <div className="card-product">
-                    <ProductImage />
+                    <div class="product-images">
+                        <ProductImage />
+                        <ThumbnailList />
+                    </div>
                     <ProductDescription />
                 </div>
-                <ThumbnailList />
+                
             </div>
         )
     }
