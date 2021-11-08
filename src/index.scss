@@ -111,3 +111,9 @@ body {
     margin-left: 16px;
  
 }
+
+.selected {
+    border: solid;
+    border-color: var(--orange);
+    opacity: 0.7;
+}

@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import selectShoe from '../actions';
+import React from 'react';
 import Thumbnail from './Thumbnail';
 import { connect } from 'react-redux';
 
