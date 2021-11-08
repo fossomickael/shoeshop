@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import React from 'react';
+import { changeQuantity } from '../actions';
 class ProductDescription extends React.Component {
     render() {
         return (<div className="product-description">
@@ -10,11 +11,20 @@ class ProductDescription extends React.Component {
             can offer</p>
             <p>$125.00 50%</p>
             <p>$250</p>
-            <p>- 0 +<button>Add to cart</button></p>
+            <p>
+                <button onClick={() => this.props.changeQuantity(this.props.quantity - 1 )}>-</button> 
+                    {this.props.quantity} 
+                <button onClick={() => this.props.changeQuantity(this.props.quantity + 1 )}>+</button>
+                <button>Add to card</button>
+            </p> 
         </div>
     )
     }
 
 }
 
-export default ProductDescription;
+const mapStateToProps = state => {
+    return { quantity: state.quantity };
+  };
+
+export default connect( mapStateToProps, {changeQuantity})(ProductDescription);

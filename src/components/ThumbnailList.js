@@ -7,7 +7,7 @@ class ThumbnailList extends React.Component {
 
     renderList = () => {
         return this.props.shoes.map(shoe => {
-            return <Thumbnail shoe={shoe} />
+            return <Thumbnail shoe={shoe} key={shoe} />
         })
     }
 
