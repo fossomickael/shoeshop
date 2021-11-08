@@ -21,3 +21,7 @@
         background-image: url(./assets/images/image-product-#{$thumbid}-thumbnail.jpg);
     }
 }
+
+.thumblist {
+    display: flex;
+}

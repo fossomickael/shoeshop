@@ -4,11 +4,18 @@ import Thumbnail from './Thumbnail';
 import { connect } from 'react-redux';
 
 class ThumbnailList extends React.Component {
+
+    renderList = () => {
+        return this.props.shoes.map(shoe => {
+            return <Thumbnail shoe={shoe} />
+        })
+    }
+
     render() {
         return (
-            this.props.shoes.map(shoe => {
-                return <Thumbnail shoe={shoe} />
-            })
+            <div className="thumblist">
+                {this.renderList()}
+            </div>
         )
     }
 
