@@ -1,4 +1,4 @@
-import { SHOE_SELECTED, CHANGE_QUANTITY } from "./types";
+import { SHOE_SELECTED } from "./types";
 
 export const selectShoe = (shoe) => {
     return {
@@ -7,9 +7,3 @@ export const selectShoe = (shoe) => {
     };
 };
 
-export const changeQuantity = (newquantity) => {
-    return {
-        type: CHANGE_QUANTITY,
-        payload: Math.max(0,newquantity)
-    };
-}

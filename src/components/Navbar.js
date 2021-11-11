@@ -1,4 +1,3 @@
-import { connect } from 'react-redux';
 import React from 'react';
 
 class Navbar extends React.Component {
@@ -11,7 +10,7 @@ class Navbar extends React.Component {
                     <li><a href="/">Men</a></li>
                     <li><a href="/">Women</a></li> 
                     <li><a href="/">About</a></li>
-                    <li className="cart"><i class="fas fa-shopping-cart"></i></li>
+                    <li className="cart"><i className="fas fa-shopping-cart"></i></li>
                 </ul>
             </div>
         )
