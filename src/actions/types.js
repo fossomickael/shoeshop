@@ -1,2 +1,1 @@
 export const SHOE_SELECTED = "SHOE_SELECTED";
-export const CHANGE_QUANTITY = "CHANGE_QUANTITY";
