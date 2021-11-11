@@ -33,7 +33,7 @@ class ProductDescription extends React.Component {
                 <button className="btn-quantity" onClick={() => this.changeQuantity(-1 )}>-</button> 
                     <span className="quantity">{this.state.quantity} </span>
                 <button className="btn-quantity" onClick={() => this.changeQuantity(1 )}>+</button>
-                <button className="btn-add-cart" onClick={() => this.addToCart()}>Add to cart</button>
+                <button className="btn-add-cart" onClick={() => this.addToCart(this.props.item.id, this.state.quantity)}>Add to cart</button>
             </p> 
         </div>
     )
@@ -42,7 +42,6 @@ class ProductDescription extends React.Component {
 }
 
 const mapStateToProps = state => {
-    console.log(state);
     return { item: state.items.find( item =>  item.id === 1), discount: state.discount };
   };
 
