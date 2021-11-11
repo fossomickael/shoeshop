@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import { searchItem } from '../actions';
+import { searchItem, addToCart} from '../actions';
 class ProductDescription extends React.Component {
     state = { quantity: 0};
 
@@ -10,6 +10,11 @@ class ProductDescription extends React.Component {
 
     changeQuantity = (toadd) => {
        this.setState({ quantity: Math.max(0,this.state.quantity + toadd) });
+    }
+
+    addToCart = (productId,quantity) => {
+        this.props.addToCart(productId,quantity)
+        this.setState({ quantity: 0 });
     }
 
     render() {
@@ -28,7 +33,7 @@ class ProductDescription extends React.Component {
                 <button className="btn-quantity" onClick={() => this.changeQuantity(-1 )}>-</button> 
                     <span className="quantity">{this.state.quantity} </span>
                 <button className="btn-quantity" onClick={() => this.changeQuantity(1 )}>+</button>
-                <button className="btn-add-cart">Add to cart</button>
+                <button className="btn-add-cart" onClick={() => this.addToCart()}>Add to cart</button>
             </p> 
         </div>
     )
@@ -41,4 +46,4 @@ const mapStateToProps = state => {
     return { item: state.items.find( item =>  item.id === 1), discount: state.discount };
   };
 
-export default connect( mapStateToProps, { searchItem})(ProductDescription);
+export default connect( mapStateToProps, { searchItem, addToCart})(ProductDescription);

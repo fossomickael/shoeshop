@@ -1,8 +1,8 @@
 const cartReducer = (cart={}, action) => {
-    if (action.type === 'GET_DISCOUNT') {
+    if (action.type === 'ADD_TO_CART') {
         return action.payload;
     }
     return {};
- };
+};
  
  export default cartReducer;
