@@ -16,7 +16,7 @@ class CartLine extends React.Component {
                 
                 <div>{this.props.item.title}</div>
                 <div>
-                {this.props.item.price} * {this.props.cartItem.quantity} <b>{this.props.item.price * this.props.cartItem.quantity }$</b>
+                {this.props.item.price} * {this.props.cartItem.quantity} <b>{this.props.item.price * this.props.cartItem.quantity * this.props.discount }$</b>
                 </div>
             </div>
         )
@@ -26,7 +26,8 @@ class CartLine extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
     return { item: state.items.find( item =>  item.id === ownProps.itemId),
-             cartItem: state.cart.find( item =>  item.id === ownProps.itemId) };
+             cartItem: state.cart.find( item =>  item.id === ownProps.itemId) 
+             , discount: state.discount};
 };
 
 
