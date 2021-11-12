@@ -1,7 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
+import CartDetail from './CartDetail';
 class Navbar extends React.Component {
+
+    state = { showDetails: false};
 
     cartQuantity = (cart) => {
         if (this.props.cart.length === 0)
@@ -10,6 +12,11 @@ class Navbar extends React.Component {
         }
         return cart.map(item => item.quantity).reduce((prev, curr) => prev + curr, 0);
     }
+
+    handleCartClick = () => {
+        this.setState({ showDetails: !this.state.showDetails });
+    }
+
     render() {
         return (
             <div className="navbar">
@@ -19,8 +26,17 @@ class Navbar extends React.Component {
                     <li><a href="/">Men</a></li>
                     <li><a href="/">Women</a></li> 
                     <li><a href="/">About</a></li>
-                    <li className="cart"><i className="fas fa-shopping-cart"></i><div className="cart-quantity">{this.cartQuantity(this.props.cart)}</div></li>
+                    <li className="cart">
+                        <i className="fas fa-shopping-cart"  onClick={() => this.handleCartClick()}></i>
+                            <div className="cart-quantity">{this.cartQuantity(this.props.cart)}
+    
+                            </div>
+                            <div>{ this.state.showDetails ? <CartDetail /> : null }</div>
+                        
+                    </li>
+                    
                 </ul>
+                
             </div>
         )
     }
