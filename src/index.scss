@@ -163,7 +163,7 @@ li a {
 
 .cart {
     float: right;
-    display: flex;
+   
     display: inline;
     position: relative;
 
@@ -184,6 +184,7 @@ li a {
 .cart-detail {
     box-shadow: rgba(0, 0, 0, 0.063) 0px 0px 3px 3px;
     padding: 8px;
+    margin-top: 8px;
 }
 
 .cart-line {

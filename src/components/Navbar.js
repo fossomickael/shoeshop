@@ -27,11 +27,12 @@ class Navbar extends React.Component {
                     <li><a href="/">Women</a></li> 
                     <li><a href="/">About</a></li>
                     <li className="cart">
-                    <i className="fas fa-shopping-cart"  onClick={() => this.handleCartClick()}></i>
-                        <div className="cart-quantity">{this.cartQuantity(this.props.cart)}
+                        <i className="fas fa-shopping-cart"  onClick={() => this.handleCartClick()}></i>
+                            <div className="cart-quantity">{this.cartQuantity(this.props.cart)}
+    
+                            </div>
+                            <div>{ this.state.showDetails ? <CartDetail /> : null }</div>
                         
-                        </div>
-                        { this.state.showDetails ? <CartDetail /> : null }
                     </li>
                     
                 </ul>
