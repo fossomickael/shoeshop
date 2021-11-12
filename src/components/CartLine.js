@@ -12,12 +12,16 @@ class CartLine extends React.Component {
           return <div>Loading</div>
         }
         return (
+            
             <div className="cart-line">
-                
                 <div>{this.props.item.title}</div>
-                <div>
-                {this.props.item.price} * {this.props.cartItem.quantity} <b>{this.props.item.price * this.props.cartItem.quantity * this.props.discount }$</b>
+                <div className="cart-line-product">
+                    <div>
+                    {this.props.item.price} * {this.props.cartItem.quantity} <b>{this.props.item.price * this.props.cartItem.quantity * this.props.discount }$</b>
+                    </div>
+                    <div><i class="far fa-trash-alt"></i></div>
                 </div>
+              
             </div>
         )
     }
