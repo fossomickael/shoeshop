@@ -1,12 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { searchItem } from "../actions/";
+import { searchItem, deleteFromCart } from "../actions/";
 
 class CartLine extends React.Component {
 
     componentDidMount() {
-        searchItem(this.props.itemId);
+        this.props.searchItem(this.props.itemId);
     }
+
+    handleBinClick = () => {
+        this.props.deleteFromCart(this.props.itemId);
+    }
+
     render() {
         if (!this.props.item) {
           return <div>Loading</div>
@@ -19,7 +24,7 @@ class CartLine extends React.Component {
                     <div>
                     {this.props.item.price} * {this.props.cartItem.quantity} <b>{this.props.item.price * this.props.cartItem.quantity * this.props.discount }$</b>
                     </div>
-                    <div><i class="far fa-trash-alt"></i></div>
+                    <div><i className="far fa-trash-alt" onClick={() => this.handleBinClick()}></i></div>
                 </div>
               
             </div>
@@ -35,4 +40,4 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 
-export default connect( mapStateToProps, {searchItem})(CartLine);
+export default connect( mapStateToProps, {searchItem, deleteFromCart})(CartLine);

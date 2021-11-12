@@ -2,6 +2,11 @@ const cartReducer = (state, action) => {
     if (state === undefined) {
         return [];
       }
+
+    if (action.type === 'DELETE_FROM_CART') {
+        return state.filter( item =>  item.id !== action.payload);
+    }
+
     if (action.type === 'ADD_TO_CART') {
         const item = state.find( item =>  item.id === action.payload.id);
         if (item  === undefined) {
