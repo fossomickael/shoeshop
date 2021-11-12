@@ -28,7 +28,7 @@ class ProductDescription extends React.Component {
             <h1>{this.props.item.title}</h1>
             <p>{this.props.item.desc}</p>
             <p><span className="price">${this.props.item.price * this.state.quantity * this.props.discount}</span> <span className="discount">50% discount</span> </p>
-            <p> <span className="reduction">${this.props.price} (unit price)</span></p>
+            <p> <span className="reduction">${this.props.item.price} (unit price)</span></p>
             <p>
                 <button className="btn-quantity" onClick={() => this.changeQuantity(-1 )}>-</button> 
                     <span className="quantity">{this.state.quantity} </span>
