@@ -14,6 +14,6 @@ class ProductImage extends React.Component {
 
 const mapStateToProps = state => {
     return { selectedShoe: state.selectedShoe };
-  };
+};
 
 export default connect(mapStateToProps)(ProductImage);
