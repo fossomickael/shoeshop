@@ -22,10 +22,10 @@ class Navbar extends React.Component {
             <div className="navbar">
                 <ul>
                     <li className="brand">sneakers</li> 
-                    <li><a href="/">Collections</a></li>
-                    <li><a href="/">Men</a></li>
-                    <li><a href="/">Women</a></li> 
-                    <li><a href="/">About</a></li>
+                    <li className="brand nav-category"><a href="/">Collections</a></li>
+                    <li className="brand nav-category"><a href="/">Men</a></li>
+                    <li className="brand nav-category"><a href="/">Women</a></li> 
+                    <li className="brand nav-category"><a href="/">About</a></li>
                     <li className="cart">
                         <i className="fas fa-shopping-cart"  onClick={() => this.handleCartClick()}></i>
                             <div className="cart-quantity">{this.cartQuantity(this.props.cart)}
