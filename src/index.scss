@@ -152,6 +152,20 @@ li a {
 
 .cart {
     float: right;
+    display: flex;
+    display: inline;
+    position: relative;
+
 }
 
+.cart-quantity {
+    position: absolute;
+    left: 12px;
+    top: -8px;
+    color: white;
+    background-color: var(--orange);
+    font-size: 8px;
+    border-radius: 4px;
+    padding: 4px;
+}
   
