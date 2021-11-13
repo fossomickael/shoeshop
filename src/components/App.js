@@ -2,6 +2,8 @@ import React from 'react';
 import ProductImage from './ProductImage';
 import ThumbnailList from './ThumbnailList';
 import Navbar from './Navbar';
+import Gallery from './Gallery';
+
 import ProductDescription from './ProductDescription';
 class App extends React.Component {
     render() {
@@ -17,8 +19,9 @@ class App extends React.Component {
                         </div>
                         <ProductDescription />
                     </div>
-                    
+                   
                 </div>
+                 <Gallery />
             </div>
         )
     }

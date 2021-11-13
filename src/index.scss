@@ -20,7 +20,7 @@ body {
 
 .product-images {
     
-    width: 500px;
+    width: 1000px;
 }
 
 .useful-width {
@@ -30,15 +30,20 @@ body {
 }
 
 .product-large  {
-    width: 100%;
-    height: 250px;
-    background-size: cover;
+    min-height: 100%;
+    
     border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
+
+
 
 @for $id from 1 through 4 {
     .product-#{$id}  {
         background-image: url(./assets/images/image-product-#{$id}.jpg);
+
+    
     }
 }
 
@@ -49,11 +54,12 @@ body {
 .thumblist {
     display: flex;
     justify-content: space-between;
-    margin-top: 25px;
+    margin-top: 5px;
 }
+
 .product-thumb  {
-    width: 50px;
-    height: 50px;
+    width: 20%;
+    height: 70px;
     background-size: cover;
     border-radius: 5px;
     cursor: pointer;
@@ -199,6 +205,23 @@ li a {
     display: flex;
     justify-content: space-between;
 }
+
+#gallery {
+    z-index: 999;
+    position: fixed;
+    height: 80%;
+    width: 600px;
+    top: 30px;
+    margin-left: 30%;
+    border-radius: 4px;
+   
+}
+
+.gallery-images {
+    height: 100%;
+}
+
+
 
 
 @media screen and (min-width: 200px) and (max-width: 840px) {
