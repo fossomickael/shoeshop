@@ -8,10 +8,19 @@ class App extends React.Component {
 
 
     state = { showGallery: false, };
+
+    backOpacity = () => {
+        if (this.state.showGallery) {
+            return "light-back";
+        }
+
+    }
+
+
     render() {
         return (
             <div>  
-                <div className="useful-width">
+                <div className={`${this.backOpacity()} useful-width`}>
                     <Navbar />
                     <div className="card-product">
                         <div className="product-images">

@@ -129,7 +129,6 @@ body {
     border-radius: 4px;
     font-size: 16px;
     margin-left: 16px;
- 
 }
 
 .selected {
@@ -219,7 +218,7 @@ li a {
 
 #gallery img {
     position: absolute;
-    top: -15px;
+    top: -20px;
     right: 0px;
 }
 
@@ -238,6 +237,14 @@ li a {
     display: block;
  }
 
+ .visible{
+    display: block;
+ }
+
+ .light-back {
+    opacity: 0.25;
+    
+ }
 
 
 
