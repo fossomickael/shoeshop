@@ -4,7 +4,7 @@ class ProductImage extends React.Component {
 
     render() {
         return (
-            <div className={`${this.props.selectedShoe} product-large`}></div>
+            <div className={`${this.props.selectedShoe} product-large`} onClick={this.props.onClick}></div>
         )
     
     }
