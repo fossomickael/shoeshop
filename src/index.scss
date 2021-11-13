@@ -35,6 +35,7 @@ body {
     border-radius: 5px;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    cursor: pointer;
 }
 
 
@@ -300,5 +301,13 @@ li a {
         background-size: contain;
         background-repeat: no-repeat;
     }
+
+    
+    .light-back {
+        opacity:1;
+        
+    }
+
+    
 
 }
